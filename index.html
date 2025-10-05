@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EDUSIS e-Library — Education Digital Unified System</title>
+    <meta
+      name="description"
+      content="EDUSIS e-Library — A digital knowledge platform for secondary education. Powered by NAT-LABs."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --brand: #0ea5a4;
+        --brand-dark: #064e4e;
+      }
+      html,
+      body {
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(6px);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-b from-slate-50 to-white text-slate-800 min-h-screen"
+  >
+    <header
+      class="sticky top-0 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-200"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-3">
+            <a href="#" class="flex items-center gap-3">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden
+              >
+                <rect
+                  x="2"
+                  y="3"
+                  width="20"
+                  height="14"
+                  rx="2"
+                  stroke="var(--brand)"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M6 8v6"
+                  stroke="var(--brand)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M10 8v6"
+                  stroke="var(--brand-dark)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M14 8v6"
+                  stroke="var(--brand)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <div>
+                <span class="block text-lg font-semibold">EDUSIS</span>
+                <span class="block text-xs text-slate-500 -mt-1"
+                  >e-Library • Powered by NAT-LABs</span
+                >
+              </div>
+            </a>
+          </div>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+            <a href="#features" class="hover:text-slate-900">Features</a>
+            <a href="#catalog" class="hover:text-slate-900">Catalog</a>
+            <a href="resources.html" class="hover:text-slate-900">Resources</a>
+            <a href="#about" class="hover:text-slate-900">About</a>
+            <a href="#contact" class="hover:text-slate-900">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a
+              href="#"
+              class="hidden sm:inline-block px-4 py-2 text-sm font-medium rounded-md border border-slate-200"
+              >Sign in</a
+            >
+            <a
+              href="#"
+              class="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-md bg-gradient-to-r from-green-400 to-teal-500 text-white shadow"
+              >Get started</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mt-8">
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+              EDUSIS e-Library — Knowledge for every secondary student
+            </h1>
+            <p class="mt-4 text-lg text-slate-600">
+              A centralized, secure and accessible digital library under the
+              Secondary Education Students Information System.
+              Curriculum-aligned resources, past exams, interactive notes and
+              more — powered by NAT-LABs.
+            </p>
+
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <div class="relative flex-1">
+                <label for="search" class="sr-only">Search library</label>
+                <input
+                  id="search"
+                  type="search"
+                  placeholder="Search by subject, title, or code (e.g. Biology, Physics)"
+                  class="w-full pl-4 pr-12 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-300"
+                />
+                <button
+                  id="clearBtn"
+                  class="absolute right-1 top-1/2 -translate-y-1/2 px-3 py-1 text-sm rounded-md"
+                >
+                  Clear
+                </button>
+              </div>
+              <a
+                href="#catalog"
+                class="inline-flex items-center px-4 py-3 rounded-lg bg-teal-600 text-white font-semibold"
+                >Browse catalog</a
+              >
+            </div>
+
+            <div
+              class="mt-6 grid grid-cols-3 sm:grid-cols-6 gap-2 text-xs text-slate-500"
+            >
+              <div class="py-2">Free access •</div>
+              <div class="py-2">Curriculum-aligned •</div>
+              <div class="py-2">Offline downloads •</div>
+              <div class="py-2">Past exams •</div>
+              <div class="py-2">Interactive notes •</div>
+              <div class="py-2">Teacher resources</div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div
+              class="p-6 rounded-2xl glass border border-slate-200 shadow-sm"
+            >
+              <h3 class="text-lg font-semibold">Quick access</h3>
+              <p class="mt-1 text-sm text-slate-600">
+                Jump straight to commonly used resources.
+              </p>
+
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a
+                  href="#"
+                  class="block p-3 rounded-lg border border-slate-100 hover:shadow"
+                  ><strong>Past Papers</strong>
+                  <div class="text-xs text-slate-500">
+                    National exams & mock tests
+                  </div></a
+                >
+                <a
+                  href="#"
+                  class="block p-3 rounded-lg border border-slate-100 hover:shadow"
+                  ><strong>Subject Notes</strong>
+                  <div class="text-xs text-slate-500">
+                    Concise, exam-focused notes
+                  </div></a
+                >
+                <a
+                  href="#"
+                  class="block p-3 rounded-lg border border-slate-100 hover:shadow"
+                  ><strong>Video Tutorials</strong>
+                  <div class="text-xs text-slate-500">
+                    Short topic explainers
+                  </div></a
+                >
+                <a
+                  href="#"
+                  class="block p-3 rounded-lg border border-slate-100 hover:shadow"
+                  ><strong>Teacher Packs</strong>
+                  <div class="text-xs text-slate-500">
+                    Lesson plans & slides
+                  </div></a
+                >
+              </div>
+
+              <hr class="my-4" />
+              <div class="text-sm text-slate-600">
+                Signed in as <strong>Student</strong>
+              </div>
+              <div class="mt-3 flex gap-2">
+                <a
+                  href="#"
+                  class="px-3 py-2 rounded-md border border-slate-200 text-sm"
+                  >My Library</a
+                >
+                <a href="#" class="px-3 py-2 rounded-md bg-emerald-50 text-sm"
+                  >Downloads</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-2xl font-bold">Platform highlights</h2>
+            <p class="mt-2 text-slate-600">
+              Designed for secondary schools, teachers and students —
+              lightweight, fast and mobile-friendly.
+            </p>
+          </div>
+
+          <div class="mt-8 grid md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-lg border border-slate-100">
+              <h3 class="font-semibold">Curriculum-aligned</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Resources mapped to national curriculum codes and learning
+                outcomes for easy reference.
+              </p>
+            </div>
+            <div class="p-6 rounded-lg border border-slate-100">
+              <h3 class="font-semibold">Offline mode</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Download bundles for offline study in low-connectivity areas.
+              </p>
+            </div>
+            <div class="p-6 rounded-lg border border-slate-100">
+              <h3 class="font-semibold">Analytics & reports</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Monitor usage, popular topics and student progress (admin view).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold">Catalog</h2>
+            <div class="text-sm text-slate-500">
+              Showing <span id="count">6</span> items
+            </div>
+          </div>
+
+          <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="cards">
+            <article
+              data-title="Biology Form 4"
+              data-subject="Biology"
+              data-file="/files/Biology_Form_4_Notes.pdf"
+              class="p-4 border rounded-lg bg-white"
+            >
+              <h3 class="font-semibold">Biology Form 4 — Topic Notes</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Concise notes covering respiration, photosynthesis and
+                circulation.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-slate-500">PDF • 12MB</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 text-xs rounded-md border">
+                    Preview
+                  </button>
+                  <button
+                    class="download-btn px-3 py-1 text-xs rounded-md bg-teal-600 text-white"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              data-title="Physics Form 3"
+              data-subject="Physics"
+              data-file="/files/Physics_Form_3_PastPapers.zip"
+              class="p-4 border rounded-lg bg-white"
+            >
+              <h3 class="font-semibold">Physics Form 3 — Past Papers</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Collection of past national exam papers with marking schemes.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-slate-500">ZIP • 4MB</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 text-xs rounded-md border">
+                    Preview
+                  </button>
+                  <button
+                    class="download-btn px-3 py-1 text-xs rounded-md bg-teal-600 text-white"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              data-title="Mathematics Form 2"
+              data-subject="Mathematics"
+              data-file="/files/Mathematics_Form_2_Examples.pdf"
+              class="p-4 border rounded-lg bg-white"
+            >
+              <h3 class="font-semibold">
+                Mathematics Form 2 — Worked Examples
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Step-by-step solutions for core algebra and geometry questions.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-slate-500">PDF • 8MB</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 text-xs rounded-md border">
+                    Preview
+                  </button>
+                  <button
+                    class="download-btn px-3 py-1 text-xs rounded-md bg-teal-600 text-white"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              data-title="Kiswahili Form 1"
+              data-subject="Kiswahili"
+              data-file="/files/Kiswahili_Reading_Pack.pdf"
+              class="p-4 border rounded-lg bg-white"
+            >
+              <h3 class="font-semibold">Kiswahili Reading Pack</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Short stories, comprehension exercises and vocabulary lists.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-slate-500">PDF • 6MB</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 text-xs rounded-md border">
+                    Preview
+                  </button>
+                  <button
+                    class="download-btn px-3 py-1 text-xs rounded-md bg-teal-600 text-white"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              data-title="Chemistry Form 4"
+              data-subject="Chemistry"
+              data-file="/files/Chemistry_Practical_Manual.pdf"
+              class="p-4 border rounded-lg bg-white"
+            >
+              <h3 class="font-semibold">Chemistry Practical Manual</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Practical experiments mapped to learning outcomes.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-slate-500">PDF • 10MB</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 text-xs rounded-md border">
+                    Preview
+                  </button>
+                  <button
+                    class="download-btn px-3 py-1 text-xs rounded-md bg-teal-600 text-white"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              data-title="History Form 3"
+              data-subject="History"
+              data-file="/files/History_Independence_Notes.pdf"
+              class="p-4 border rounded-lg bg-white"
+            >
+              <h3 class="font-semibold">History — Independence Movements</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Illustrated notes and timelines for key events.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-slate-500">PDF • 9MB</div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-1 text-xs rounded-md border">
+                    Preview
+                  </button>
+                  <button
+                    class="download-btn px-3 py-1 text-xs rounded-md bg-teal-600 text-white"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="mt-12">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-start"
+        >
+          <div>
+            <h2 class="text-xl font-bold">About EDUSIS e-Library</h2>
+            <p class="mt-2 text-slate-600">
+              EDUSIS is a project designed to give secondary school students in
+              Tanzania (and beyond) equitable access to high-quality learning
+              materials. It sits under the Secondary Education Students
+              Information System and is powered by NAT-LABs — focused on
+              accessibility, curriculum-alignment and sustainability.
+            </p>
+          </div>
+
+          <div id="contact">
+            <h3 class="text-lg font-semibold">Contact</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              For partnerships, content contributions or technical support,
+              reach out to:
+            </p>
+            <ul class="mt-3 text-sm text-slate-700">
+              <li><strong>Email:</strong> support@nat-labs.example</li>
+              <li><strong>Phone:</strong> +255 000 000 000</li>
+              <li>
+                <strong>Address:</strong> NAT-LABs, Dar es Salaam, Tanzania
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-16 border-t border-slate-200 bg-white">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div class="text-sm text-slate-600">
+            © <span id="year"></span> EDUSIS — Education Digital Unified System.
+            All rights reserved.
+          </div>
+          <div class="text-sm text-slate-600">
+            Built &amp; powered by <strong>NAT-LABs</strong>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // small interactive behaviors: search filtering and dynamic year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const search = document.getElementById("search");
+      const cards = Array.from(document.querySelectorAll("#cards article"));
+      const countEl = document.getElementById("count");
+      const clearBtn = document.getElementById("clearBtn");
+
+      function updateCount() {
+        const visible = cards.filter((c) => c.style.display !== "none").length;
+        countEl.textContent = visible;
+      }
+
+      function filter(q) {
+        const t = q.trim().toLowerCase();
+        cards.forEach((card) => {
+          const title = card.dataset.title.toLowerCase();
+          const subject = card.dataset.subject.toLowerCase();
+          if (!t || title.includes(t) || subject.includes(t)) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+        updateCount();
+      }
+
+      search.addEventListener("input", (e) => filter(e.target.value));
+      clearBtn.addEventListener("click", () => {
+        search.value = "";
+        filter("");
+      });
+
+      // accessibility: focus outline on keyboard nav
+      document.body.addEventListener("keydown", (e) => {
+        if (e.key === "Tab")
+          document.documentElement.classList.add("using-keyboard");
+      });
+
+      // --- New Download Functionality ---
+
+      /**
+       * Finds the nearest parent element with a 'data-file' attribute
+       * and triggers a download using the link in that attribute.
+       */
+      function handleDownloadClick(event) {
+        // Find the parent article element which holds the data-file attribute
+        const article = event.target.closest("article");
+
+        if (article) {
+          const fileURL = article.getAttribute("data-file");
+          const originalFileName =
+            article.getAttribute("data-title").replace(/\s+/g, "_") ||
+            "document"; // Use title for name
+
+          if (fileURL) {
+            // Create a temporary anchor element
+            const a = document.createElement("a");
+            a.style.display = "none";
+            a.href = fileURL;
+
+            // Use the 'download' attribute to suggest a file name.
+            // Modern browsers will use this if the link is on the same domain or a data URL.
+            a.setAttribute("download", originalFileName);
+
+            // Add the element to the DOM, click it, and then remove it
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            console.log(`Attempting to download: ${fileURL}`);
+          } else {
+            console.error("No file URL found for this article.");
+          }
+        }
+      }
+
+      // Attach the event listener to all buttons with the class 'download-btn'
+      document.querySelectorAll(".download-btn").forEach((button) => {
+        button.addEventListener("click", handleDownloadClick);
+      });
+
+      // --- End of New Download Functionality ---
+    </script>
+  </body>
+</html>

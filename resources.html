@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUSIS e-Library | Resources</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-50 via-white to-teal-50 text-gray-800 min-h-screen flex flex-col font-sans"
+  >
+    <header class="bg-white shadow-lg py-4 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <h1
+          class="text-2xl font-extrabold text-blue-600 tracking-tight flex items-center gap-2"
+        >
+          <i data-feather="book-open" class="text-teal-600"></i>
+          EDUSIS e-Library
+        </h1>
+        <nav class="space-x-6 text-sm">
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-blue-700 transition"
+            >Home</a
+          >
+          <a
+            href="resources.html"
+            class="text-teal-700 font-semibold border-b-2 border-blue-700"
+            >Resources</a
+          >
+          <a href="#" class="text-gray-600 hover:text-red-700 transition"
+            >Logout</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl mx-auto px-6 py-12">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-teal-700 mb-2">
+          Learning Resources
+        </h2>
+        <p class="text-gray-600">
+          Search and explore digital resources designed for secondary education.
+        </p>
+      </div>
+
+      <div class="relative max-w-xl mx-auto mb-10">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search by subject, title, or keyword..."
+          class="w-full pl-12 pr-4 py-3 border rounded-full shadow-sm focus:ring-2 focus:ring-teal-600 focus:outline-none"
+        />
+        <i
+          data-feather="search"
+          class="absolute left-4 top-3.5 text-gray-400"
+        ></i>
+      </div>
+
+      <div id="resourcesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 border border-gray-100"
+          data-title="Biology Form 4 Notes"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <i data-feather="activity" class="text-teal-600"></i>
+            <h3 class="text-lg font-semibold">Biology Form 4 Notes</h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Covers cell structure, genetics, respiration, and more.
+          </p>
+          <div class="mt-4 flex justify-between items-center text-sm">
+            <span class="text-gray-500">PDF • 5MB</span>
+            <a
+              href="files/biology_form4_notes.pdf"
+              download="Biology_Form4_Notes.pdf"
+              class="text-blue-600 hover:underline flex items-center gap-1"
+              ><i data-feather="download"></i>Download</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 border border-gray-100"
+          data-title="Physics Form 3 Papers"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <i data-feather="cpu" class="text-teal-600"></i>
+            <h3 class="text-lg font-semibold">Physics Form 3 Past Papers</h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Includes national exams with marking schemes.
+          </p>
+          <div class="mt-4 flex justify-between items-center text-sm">
+            <span class="text-gray-500">ZIP • 3MB</span>
+            <a
+              href="files/physics_form3_papers.zip"
+              download="Physics_Form3_Past_Papers.zip"
+              class="text-teal-600 hover:underline flex items-center gap-1"
+              ><i data-feather="download"></i>Download</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 border border-gray-100"
+          data-title="Mathematics Form 2 Guide"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <i data-feather="divide-square" class="text-teal-600"></i>
+            <h3 class="text-lg font-semibold">Mathematics Form 2 Guide</h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Step-by-step examples and formula review.
+          </p>
+          <div class="mt-4 flex justify-between items-center text-sm">
+            <span class="text-gray-500">PDF • 6MB</span>
+            <a
+              href="files/math_form2_guide.pdf"
+              download="Mathematics_Form2_Guide.pdf"
+              class="text-teal-600 hover:underline flex items-center gap-1"
+              ><i data-feather="download"></i>Download</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 border border-gray-100"
+          data-title="Chemistry Practical Manual"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <i data-feather="flask" class="text-teal-600"></i>
+            <h3 class="text-lg font-semibold">Chemistry Practical Manual</h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Lab experiments and safety guidelines.
+          </p>
+          <div class="mt-4 flex justify-between items-center text-sm">
+            <span class="text-gray-500">PDF • 4MB</span>
+            <a
+              href="files/chemistry_manual.pdf"
+              download="Chemistry_Practical_Manual.pdf"
+              class="text-teal-600 hover:underline flex items-center gap-1"
+              ><i data-feather="download"></i>Download</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 border border-gray-100"
+          data-title="History Independence Notes"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <i data-feather="flag" class="text-teal-600"></i>
+            <h3 class="text-lg font-semibold">
+              History — Independence Movements
+            </h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Covers major African and global independence movements.
+          </p>
+          <div class="mt-4 flex justify-between items-center text-sm">
+            <span class="text-gray-500">PDF • 7MB</span>
+            <a
+              href="files/history_independence.pdf"
+              download="History_Independence_Notes.pdf"
+              class="text-teal-600 hover:underline flex items-center gap-1"
+              ><i data-feather="download"></i>Download</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 border border-gray-100"
+          data-title="English Form 1 Reader"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <i data-feather="book" class="text-teal-600"></i>
+            <h3 class="text-lg font-semibold">English Form 1 Reader</h3>
+          </div>
+          <p class="text-sm text-gray-600">
+            Short stories, comprehension, and grammar practice.
+          </p>
+          <div class="mt-4 flex justify-between items-center text-sm">
+            <span class="text-gray-500">PDF • 8MB</span>
+            <a
+              href="files/english_form1_reader.pdf"
+              download="English_Form1_Reader.pdf"
+              class="text-teal-600 hover:underline flex items-center gap-1"
+              ><i data-feather="download"></i>Download</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-white border-t py-6 mt-auto text-center text-sm text-gray-500"
+    >
+      © <span id="year"></span> EDUSIS — Powered by NAT-LABs. All rights
+      reserved.
+    </footer>
+
+    <script>
+      feather.replace();
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const searchInput = document.getElementById("searchInput");
+      const cards = document.querySelectorAll("#resourcesGrid > div");
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        cards.forEach((card) => {
+          const title = card.dataset.title.toLowerCase();
+          card.style.display = title.includes(query) ? "block" : "none";
+        });
+      });
+    </script>
+  </body>
+</html>
